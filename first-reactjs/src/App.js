@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Head from './components/Header'
 
-function App() {
+// functional component
+// function App() {
+//   return <div>Hello world</div>
+// }
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Head/>
+      <div>Body</div>
+    </>
+  )
 }
 
-export default App;
+// class components
+// export class App extends Component {
+//   render() {
+//     return <div>Hello</div>
+//   }
+// }
+
+// export default App;

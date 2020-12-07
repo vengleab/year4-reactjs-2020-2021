@@ -1,0 +1,31 @@
+.header {
+  height: 50px;
+  background-color: gray;
+
+  div {
+    float: left;
+    padding: 10px;
+    /* margin: 5px; */
+    height: 100%;
+
+    &:hover {
+      cursor: pointer;
+      background-color: white;
+      border-radius: 10px;
+    }
+      
+  }
+}
+
+// .header div {
+//   float: left;
+//   padding: 10px;
+//   /* margin: 5px; */
+//   height: 100%;
+// }
+
+// .header div:hover {
+  // cursor: pointer;
+  // background-color: white;
+  // border-radius: 10px;
+// }
