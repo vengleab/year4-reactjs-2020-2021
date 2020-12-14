@@ -10,7 +10,7 @@ export const App = () => {
   return (
     <>
       <Head/>
-      <div>Body</div>
+      <div style={{marginTop: '100px'}}>Body</div>
     </>
   )
 }
