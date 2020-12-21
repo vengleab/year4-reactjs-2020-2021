@@ -1,5 +1,7 @@
 import './App.css';
 import Head from './components/Header'
+import Body from './components/Body'
+import HeaderItem from './components/HeaderItem'
 
 // functional component
 // function App() {
@@ -9,8 +11,13 @@ import Head from './components/Header'
 export const App = () => {
   return (
     <>
-      <Head/>
-      <div style={{marginTop: '100px'}}>Body</div>
+      <Head>
+        <HeaderItem active>Home</HeaderItem>
+        {/* <HeaderItem label="Home" active/>*/}
+        <HeaderItem>Contact Us</HeaderItem>
+        <HeaderItem>About Us</HeaderItem>
+      </Head>
+      <Body/>
     </>
   )
 }

@@ -1,17 +1,10 @@
 import "./Header.scss";
-import HeaderItem from  "../HeaderItem";
+import HeaderItem from "../HeaderItem";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div className="header">
-      {/*<div>Home</div>
-      <div>Contact Us</div>
-      <div>About Us</div>*/}
-      <HeaderItem label="Home" active/>
-      <HeaderItem label="Contact Us"/>
-      <HeaderItem label="About Us"/>
-      <HeaderItem/>
-
+      {props.children}
     </div>
   );
 };
