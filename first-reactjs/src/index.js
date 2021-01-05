@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import {BrowserRouter} from 'react-router-dom';
 // alias
-import { App as HomePage } from './App';
+import { App } from './App';
 import reportWebVitals from './reportWebVitals';
 // npx create-react-app , SPA, we can use NextJS for multiple page application or use react-router-dom (client-side route)
 ReactDOM.render(
   <React.StrictMode>
-    <HomePage/>
+    <BrowserRouter>
+      <App/>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('app')
 );

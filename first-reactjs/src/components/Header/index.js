@@ -1,18 +1,27 @@
 import "./Header.scss";
-import HeaderItem from "../HeaderItem";
+import Button from "react-bootstrap/Button";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import {Form, FormControl} from "react-bootstrap";
+import {Link} from 'react-router-dom';
 
-// props = {
-//   children: ""
-// }
 
 const Header = (props) => {
-  const { children ,  isFluid} = props;
-  // const children = props.children; // the same as above
-
   return (
-    <div className={`header ${isFluid ? "fluid": ""}`}  >
-      { children }
-    </div>
+    <Navbar bg="light" expand="lg">
+        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar className="mr-auto">
+            <Link className="nav-link" to="/index">Home</Link>
+            <Link className="nav-link" to="/about-us">About Us</Link>
+          </Navbar>
+          <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Link className="btn btn-outline-success" to="/login">Login</Link>
+          </Form>
+        </Navbar.Collapse>
+      </Navbar>
   );
 };
 
