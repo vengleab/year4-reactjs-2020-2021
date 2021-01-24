@@ -13,7 +13,7 @@ const Header = (props) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Navbar className="mr-auto">
-            <Link className="nav-link" to="/index">Home</Link>
+            <Link className="nav-link" to="/dashboard">Home</Link>
             <Link className="nav-link" to="/about-us">About Us</Link>
           </Navbar>
           <Form inline>

@@ -1,13 +1,13 @@
-import "./App.css";
-import React from "react";
+import './App.css';
+import React from 'react';
 
 // easy manage code, prevent production error
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Header} from "./components";
-import { Route, Switch } from "react-router-dom";
-import Home from "./pages/Home";
-import AboutUs from "./pages/AboutUs";
-import Login from "./pages/Login";
+import {Header} from './components';
+import { Route, Switch } from 'react-router-dom';
+import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
+import Login from './pages/Login';
 
 export class App extends React.Component {
   constructor(props) {
@@ -24,8 +24,8 @@ export class App extends React.Component {
       <>
         <Header/>
         <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route path="/index" component={Home}/>
+          <Route exact path="/" component={Login}/>
+          <Route path="/dashboard" component={Home}/>
           <Route path="/about-us" component={AboutUs}/>
           <Route path="/login" component={Login}/>
         </Switch>
