@@ -9,11 +9,12 @@ import {Link} from 'react-router-dom';
 const Header = (props) => {
   return (
     <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home">Article Management app</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Navbar className="mr-auto">
-            <Link className="nav-link" to="/dashboard">Home</Link>
+            <Link className="nav-link" to="/home">Home</Link>
+            <Link className="nav-link" to="/post-article">Post Article</Link>
             <Link className="nav-link" to="/about-us">About Us</Link>
           </Navbar>
           <Form inline>

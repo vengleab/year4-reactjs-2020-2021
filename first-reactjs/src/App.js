@@ -8,6 +8,11 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Login from './pages/Login';
+import PostArticle from './pages/PostArticle';
+import AuthComponent from './components/AuthComponent';
+import ViewArticle from './components/ViewArticle';
+
+const AuthPostArticle = (props) => <AuthComponent><PostArticle {...props}/></AuthComponent>
 
 export class App extends React.Component {
   constructor(props) {
@@ -24,10 +29,12 @@ export class App extends React.Component {
       <>
         <Header/>
         <Switch>
-          <Route exact path="/" component={Login}/>
-          <Route path="/dashboard" component={Home}/>
+          <Route path="/home" component={Home}/>
+          <Route exact path="/" component={Home}/>
           <Route path="/about-us" component={AboutUs}/>
           <Route path="/login" component={Login}/>
+          <Route path="/post-article" component={AuthPostArticle}/>
+          <Route path="/view-article/:id" component={ViewArticle}/>
         </Switch>
       </>
     );

@@ -4,22 +4,17 @@ import {Link, Route, Switch} from 'react-router-dom';
 import Chart from '../../components/Chart'
 import Profile from '../../components/Profile'
 import Widget from '../../components/Widget'
+import Card from '@bit/nsebhastian.react_fusejs.card';
  
 const Home = (props) => {
-  const currentPath ='/dashboard';
-  console.log({props});
   return <Row>
-  <Col md={3}>
-    <Link to={`${currentPath}/chart`}><Button block title="Chart">Chart</Button></Link> 
-    <Link to={`${currentPath}/widget`}><Button block >Widget</Button></Link>
-    <Link to={`${currentPath}/profile`}><Button block>Profile</Button></Link>
-  </Col>
-  <Col md={9}>
-    <Switch>
-      <Route path={`${currentPath}/chart`} component={Chart} />
-      <Route path={`${currentPath}/widget`} component={Widget} />
-      <Route path={`${currentPath}/profile`} component={Profile} />
-    </Switch>
+  <Col md={8}>
+  <Card  
+		image="https://images-na.ssl-images-amazon.com/images/I/41dKkez-1rL._SX326_BO1,204,203,200_.jpg"
+		title="Steve Jobs"
+		author="Walter Isaacson"
+		url="/view-article/12345"
+	/>
   </Col>
 </Row>;
 };

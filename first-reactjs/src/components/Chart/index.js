@@ -48,9 +48,9 @@ export default class Chart extends React.Component {
 
 // ============ unmount
 
-  componentWillMount() {
-    alert('componentWillMount')
-    console.log('componentWillMount')
+  componentWillUnmount() {
+    alert('componentWillUnMount')
+    console.log('componentWillUnMount')
   }
 
   render(){
