@@ -5,25 +5,53 @@ import Chart from '../../components/Chart';
 import Profile from '../../components/Profile';
 import Widget from '../../components/Widget';
 import Card from '@bit/nsebhastian.react_fusejs.card';
+import axios from 'axios';
+import Request from '../../api/Request';
 
 class Home extends React.Component {
   state = {};
 
-  componentDidMount() {
+  async componentDidMount() {
     // Get data from server
     // to integrate with server, we often "fetch" or "axios"
-    fetch('/articles')
-      .then(res=> res)
-      .then(res=>{
-        // logic
-        return res.json()
-      })
-      .then(articles=>{
-        // logic
-        this.setState({ articles });
-      });
+    // fetch 
+    // fetch('/articles')
+    //   .then(res=> res)
+    //   .then(res=>{
+    //     // logic
+    //     return res.json()
+    //   })
+    //   .then(articles=>{
+    //     // logic
+    //     this.setState({ articles });
+    //   });
     // const articles = await response.json();
     
+    // axios.get('/articles')
+    //   .then(res => {
+
+    //     axios.get('/articles')
+    //     .then(res => {
+    //        const data = axios.get('/articles')
+    //         .then(res => {
+    //           return res.data
+    //           // this.setState({articles}) // short-cut
+    //         })
+    //     })
+
+
+    //     // get data from nested request
+
+    //     return res.data
+        
+    //     // this.setState({articles}) // short-cut
+    //   }).then( articles =>{
+    //     this.setState({articles: articles})
+    //   })
+
+    const res = await axios.get('/articles');
+    this.setState({articles: res.data});
+
   }
 
   render() {
