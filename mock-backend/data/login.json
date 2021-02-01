@@ -1,0 +1,7 @@
+{
+  "message": "Success",
+  "statusCode": 200,
+  "result": {
+      "token": "eyJhbGciOiJIUzI1NiJ9.NWY5ZDMyOTlhMjcxNDkyNmI2MTk0MWNi.8uvA30nsIEcHIvQSHzIz6cuisqofmUxBDmbCf183gJ0"
+  }
+}
