@@ -7,6 +7,7 @@ import Widget from '../../components/Widget';
 import Card from '@bit/nsebhastian.react_fusejs.card';
 import axios from 'axios';
 import Request from '../../api/Request';
+import ArticleRequest from '../../api/ArticleRequest';
 
 class Home extends React.Component {
   state = {};
@@ -49,8 +50,9 @@ class Home extends React.Component {
     //     this.setState({articles: articles})
     //   })
 
-    const res = await axios.get('/articles');
-    this.setState({articles: res.data});
+    // const res = await axios.get('/articles');
+    const articles = await ArticleRequest.getAll();
+    this.setState({articles: articles });
 
   }
 

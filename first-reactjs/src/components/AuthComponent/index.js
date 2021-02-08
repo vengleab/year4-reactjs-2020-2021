@@ -11,10 +11,18 @@ export default class AuthComponent extends Component {
     })
   }
 
+  setToken = (token) => {
+    console.log('token',  token);
+    this.setState({
+      isLogin:true,
+      token,
+    })
+  }
+
   render() {
     const {isLogin} = this.state 
     return (
-      isLogin ? (<div>{this.props.children}</div>): <Login/>
+      isLogin ? (<div>{this.props.children}</div>): <Login setToken={this.setToken}/>
     )
   }
 }

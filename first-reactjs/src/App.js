@@ -13,6 +13,7 @@ import AuthComponent from './components/AuthComponent';
 import ViewArticle from './components/ViewArticle';
 
 const AuthPostArticle = (props) => <AuthComponent><PostArticle {...props}/></AuthComponent>
+const AuthHome = (props)=><AuthComponent><Home {...props}/></AuthComponent>
 
 export class App extends React.Component {
   constructor(props) {
@@ -32,7 +33,7 @@ export class App extends React.Component {
           <Route path="/home" component={Home}/>
           <Route exact path="/" component={Home}/>
           <Route path="/about-us" component={AboutUs}/>
-          <Route path="/login" component={Login}/>
+          <Route path="/login" component={AuthHome}/>
           <Route path="/post-article" component={AuthPostArticle}/>
           <Route path="/view-article/:id" component={ViewArticle}/>
         </Switch>
