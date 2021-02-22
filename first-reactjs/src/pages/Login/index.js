@@ -2,8 +2,10 @@ import React from 'react'
 import './login.scss'
 import axios from 'axios';
 import AuthRequest from '../../api/AuthRequest';
+import {authenticated} from '../../redux/actions/authAction';
+import {connect} from 'react-redux'
 
-export default class Login extends React.Component {
+class Login extends React.Component {
   state = {}
 
   handleOnChange = (event) =>{
@@ -21,7 +23,9 @@ export default class Login extends React.Component {
     
     try {
       const token = await AuthRequest.login(login, password);
-      this.props.setToken(token);
+      // this.props.setToken(token);
+      this.props.dispatch(authenticated);
+      console.log('this.props', this.props)
     } catch (error){
       console.log(error);
       alert('Unauthorized');
@@ -55,3 +59,5 @@ export default class Login extends React.Component {
     )
   }
 }
+
+export default connect()(Login);

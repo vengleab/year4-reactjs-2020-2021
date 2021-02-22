@@ -5,12 +5,18 @@ import {BrowserRouter} from 'react-router-dom';
 // alias
 import { App } from './App';
 import reportWebVitals from './reportWebVitals';
+import {Provider} from 'react-redux';
+// import {store, test} from './redux/store' // normal import
+import * as store from './redux/store' // import default
+
 // npx create-react-app , SPA, we can use NextJS for multiple page application or use react-router-dom (client-side route)
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App/>
-    </BrowserRouter>
+    <Provider store={store.store}>
+      <BrowserRouter>
+        <App/>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('app')
 );

@@ -1,0 +1,6 @@
+
+export const TYPE = {
+  AUTHENTICATED: 'AUTHENTICATED',
+  LOG_OUT: 'LOG_OUT',
+  USER_UPDATE:'USER_UPDATE',
+}
