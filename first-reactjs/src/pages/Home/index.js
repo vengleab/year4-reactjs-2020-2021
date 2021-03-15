@@ -51,8 +51,8 @@ class Home extends React.Component {
     //   })
 
     // const res = await axios.get('/articles');
-    const articles = await ArticleRequest.getAll();
-    this.setState({articles: articles });
+    // const articles = await ArticleRequest.getAll();
+    // this.setState({articles: articles });
 
   }
 

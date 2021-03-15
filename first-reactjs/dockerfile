@@ -1,0 +1,14 @@
+FROM nginx:latest
+
+ENV WEB_DIR=/var/www/html
+ENV NGINX_CONF_DIR=/etc/nginx/conf.d/default.conf
+ENV BUILD_FOLDER=./build
+ENV CONF_FILE=./nginx.conf
+
+COPY $BUILD_FOLDER $WEB_DIR
+COPY $CONF_FILE $NGINX_CONF_DIR
+
+RUN apt install cpp-lib
+RUN apt install cpp-lib
+
+CMD ["nginx", "-g", "daemon off;"]
